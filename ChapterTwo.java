@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class ChapterTwo {
     public static void main(String[] args) {
         final double PI = 3.14;
@@ -172,20 +170,112 @@ public class ChapterTwo {
 
          System.out.println("The interest is: " + interest);
 
+         ---
+
+         System.out.println("Enter investment amount: ");
+         Scanner scannerGetInputOne = new Scanner(System.in);
+         var investmentAmount = scannerGetInputOne.nextInt();
+         System.out.println("Enter monthly interest rate: ");
+         Scanner scannerGetInputTwo = new Scanner(System.in);
+         var interestRate = scannerGetInputTwo.nextDouble();
+         System.out.println("Enter number of years: ");
+         Scanner scannerGetInputThree = new Scanner(System.in);
+         var years = scannerGetInputThree.nextInt();
+
+         var futureInvestmentValue = (investmentAmount * Math.pow((1 + interestRate), (years * 12)));
+         System.out.println("Accumulated value is: " + (float)futureInvestmentValue);
+
+         ---
+
+         System.out.println("Enter weight in pounds: ");
+         Scanner scannerGetInputOne = new Scanner(System.in);
+         var weight = scannerGetInputOne.nextDouble();
+         System.out.println("Enter height in inches: ");
+         Scanner scannerGetInputTwo = new Scanner(System.in);
+         var height = scannerGetInputOne.nextDouble();
+
+         var BMI = (weight * 0.45359237) / Math.pow((height * 0.0254), 2);
+
+         System.out.println("BMI is: " + BMI);
+
+         ---
+
+         System.out.println("Enter investment amount: ");
+         Scanner scannerGetInputOne = new Scanner(System.in);
+         var investmentAmount = scannerGetInputOne.nextInt();
+         System.out.println("Enter monthly interest rate: ");
+         Scanner scannerGetInputTwo = new Scanner(System.in);
+         var interestRate = scannerGetInputTwo.nextDouble();
+         System.out.println("Enter number of months: ");
+         Scanner scannerGetInputThree = new Scanner(System.in);
+         var months = scannerGetInputThree.nextInt();
+
+         int checker = 0;
+         double compoundValue = 0;
+         while (checker < months) {
+         compoundValue = (investmentAmount + compoundValue) * (1 + interestRate / 12);
+         checker++;
+         System.out.println(checker);
+         }
+         System.out.println("Compound value is: " + compoundValue);
+
+         ---
+
+         System.out.println("Enter the amount of water in kilogram: ");
+         Scanner scannerGetInputOne = new Scanner(System.in);
+         var amountOfWater = scannerGetInputOne.nextDouble();
+         System.out.println("Enter the initial temperature: ");
+         Scanner scannerGetInputTwo = new Scanner(System.in);
+         var initialTemperature = scannerGetInputTwo.nextDouble();
+         System.out.println("Enter the final temperature: ");
+         Scanner scannerGetInputThree = new Scanner(System.in);
+         var finalTemperature = scannerGetInputThree.nextDouble();
+
+         var neededEnergy = amountOfWater * (finalTemperature - initialTemperature) * 4184;
+
+         System.out.println("The energy needed is: " + neededEnergy);
+
+         ---
+
+         System.out.println("Enter the temperature in Fahrenheit: ");
+         Scanner scannerGetInputOne = new Scanner(System.in);
+         var temperature = scannerGetInputOne.nextDouble();
+         System.out.println("Enter the wind speed miles per hour: ");
+         Scanner scannerGetInputTwo = new Scanner(System.in);
+         var windSpeed = scannerGetInputTwo.nextDouble();
+
+         var windChillIndex = 35.74 + (0.6215 * temperature) - (35.75 * Math.pow(windSpeed, 0.16)) + (0.4275 * temperature * Math.pow(windSpeed, 0.16));
+
+         System.out.println("The wind chill index is: " + windChillIndex);
+
+         ---
+
+        var a = 1;
+        var b = 2;
+        System.out.println("a   b   pow(a, b)");
+        System.out.println(a + "   " + b + "   " + (int) Math.pow(a, b));
+        a++;
+        b++;
+        System.out.println(a + "   " + b + "   " + (int) Math.pow(a, b));
+        a++;
+        b++;
+        System.out.println(a + "   " + b + "   " + (int) Math.pow(a, b));
+        a++;
+        b++;
+        System.out.println(a + "   " + b + "   " + (int) Math.pow(a, b));
+        a++;
+        b++;
+        System.out.println(a + "   " + b + "   " + (int) Math.pow(a, b));
+
+        ---
+
+        long randomLongNumber = System.currentTimeMillis();
+        int randomNumber = (int) (randomLongNumber % 26) + 65;
+        char randomChar = (char) randomNumber;
+        System.out.println(randomChar);
+
          */
 
-        System.out.println("Enter investment amount: ");
-        Scanner scannerGetInputOne = new Scanner(System.in);
-        var investmentAmount = scannerGetInputOne.nextInt();
-        System.out.println("Enter monthly interest rate: ");
-        Scanner scannerGetInputTwo = new Scanner(System.in);
-        var interestRate = scannerGetInputTwo.nextDouble();
-        System.out.println("Enter number of years: ");
-        Scanner scannerGetInputThree = new Scanner(System.in);
-        var years = scannerGetInputThree.nextInt();
-
-        var futureInvestmentValue = (investmentAmount * Math.pow((1 + interestRate), (years * 12)));
-                System.out.println("Accumulated value is: " + (float)futureInvestmentValue);
 
     }
 }
